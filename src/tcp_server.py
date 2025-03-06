@@ -15,10 +15,12 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
 
     while True:
         conn, addr = server.accept()
+        console.print(f"[cyan]Cliente conectado:[/cyan] {addr}")
+
         with conn:
-            console.print(f"[cyan]Cliente conectado:[/cyan] {addr}")
-            cpf = conn.recv(1024).decode()
-            if not cpf:
-                break
-            resposta = "[bold green]Válido[/bold green]" if validar_cpf(cpf) else "[bold red]Inválido[/bold red]"
-            conn.sendall(resposta.encode())
+            while True:
+                cpf = conn.recv(1024).decode()
+                if not cpf:
+                    break
+                resposta = "[bold green]Válido[/bold green]" if validar_cpf(cpf) else "[bold red]Inválido[/bold red]"
+                conn.sendall(resposta.encode())
