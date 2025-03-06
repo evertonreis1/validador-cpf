@@ -2,12 +2,6 @@ import socket
 import time
 from rich.console import Console
 
-console = Console()
-
-HOST = '127.0.0.1'
-PORT = 65432
-RETRY_INTERVAL = 1
-MAX_RETRIES = 5
 
 def main():
     wait_for_server(HOST, PORT)
@@ -41,6 +35,14 @@ def wait_for_server(host, port):
             console.print("[bold red]Servidor indisponível. Tentando novamente...[/bold red]")
             retries += 1
             time.sleep(RETRY_INTERVAL)
+
+
+HOST = '127.0.0.1'
+PORT = 65432
+RETRY_INTERVAL = 1
+MAX_RETRIES = 5
+
+console = Console()
 
 
 if __name__ == '__main__':
