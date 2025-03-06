@@ -1,5 +1,3 @@
-from rich import print
-
 def validar_cpf(cpf: str) -> bool:
     cpf = ''.join([c for c in cpf if c.isdigit()])
     if len(cpf) != 11:
