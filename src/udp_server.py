@@ -15,5 +15,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as server:
     while True:
         data, addr = server.recvfrom(1024)
         cpf = data.decode()
+
+        console.print(f"[cyan]Recebido de {addr}:[/cyan] {cpf}")
+        
         resposta = "[bold green]Válido[/bold green]" if validar_cpf(cpf) else "[bold red]Inválido[/bold red]"
         server.sendto(resposta.encode(), addr)
