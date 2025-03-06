@@ -26,6 +26,20 @@ cpf_validator/
 
 ## **Como Executar**
 
+### **Execução simplificada**
+
+Execute o servidor TCP ou UDP de uma forma simplificada executando o seguinte comando:
+
+```bash
+python run TCP
+```
+ou
+
+```bash
+python run UDP
+```
+
+### **Execução manual**
 ### 1. **Rodando o Servidor TCP**
 
 Execute o servidor TCP com o seguinte comando:
