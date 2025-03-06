@@ -50,4 +50,7 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         console.print("\n[bold cyan]Encerrando o cliente...[/bold cyan]")
+    except BrokenPipeError:
+        console.print("\n[bold red]Conexão encerrada pelo servidor.[/bold red]")
+    finally:
         exit(0)
