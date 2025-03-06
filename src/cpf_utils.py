@@ -1,8 +1,7 @@
-import re
 from rich import print
 
 def validar_cpf(cpf: str) -> bool:
-    cpf = re.sub(r'\D', '', cpf)  # Remove caracteres não numéricos
+    cpf = ''.join([c for c in cpf if c.isdigit()])
     if len(cpf) != 11:
         return False
     
