@@ -32,12 +32,12 @@ validador-cpf/
 Execute o servidor TCP ou UDP de uma forma simplificada executando o seguinte comando:
 
 ```bash
-python run tcp
+python run.py tcp
 ```
 ou
 
 ```bash
-python run udp
+python run.py udp
 ```
 
 ### **Execução manual**
