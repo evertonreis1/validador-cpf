@@ -16,7 +16,7 @@ A validação do CPF é realizada verificando sua estrutura e os dois últimos d
 ```
 validador-cpf/
 │── src/
-│   ├── run.py             # Ultilitário para facilitar a execução
+│   ├── run.py             # Utilitário para facilitar a execução
 │   ├── cpf_utils.py       # Função para validação de CPF
 │   ├── tcp_server.py      # Servidor TCP
 │   ├── tcp_client.py      # Cliente TCP
