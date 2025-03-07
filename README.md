@@ -14,7 +14,7 @@ A validação do CPF é realizada verificando sua estrutura e os dois últimos d
 ## **Estrutura do Projeto**
 
 ```
-cpf_validator/
+validador-cpf/
 │── src/
 │   ├── cpf_utils.py       # Função para validação de CPF
 │   ├── tcp_server.py      # Servidor TCP
